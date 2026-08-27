@@ -31,6 +31,8 @@ backend/       后端 API（Python + FastAPI + SQLite）
 
 ### 启动步骤
 
+Windows 可直接双击仓库根目录的 `start.bat` 一键启动（自动创建 venv 并安装依赖），`kill8000.bat` 用于停止服务。手动启动：
+
 ```bash
 cd backend
 python -m venv venv && source venv/Scripts/activate   # Windows
