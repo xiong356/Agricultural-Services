@@ -1,0 +1,9 @@
+{
+  "desc": "溪山农服小程序sitemap配置",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

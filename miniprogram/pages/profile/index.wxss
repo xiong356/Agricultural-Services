@@ -1,0 +1,205 @@
+/* pages/profile/index.wxss */
+
+/* —— 个人信息卡 —— */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 32rpx;
+}
+
+.profile-top {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+}
+
+.avatar {
+  width: 112rpx;
+  height: 112rpx;
+  border-radius: 50%;
+  background: #7A8471;
+  color: #FFFFFF;
+  font-size: 48rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.user-name {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #1F1B16;
+}
+
+.village-tag {
+  display: inline-flex;
+  align-self: flex-start;
+  background: #E8F0E4;
+  color: #7A8471;
+  font-size: 22rpx;
+  border-radius: 20rpx;
+  padding: 6rpx 18rpx;
+}
+
+.stats-row {
+  display: flex;
+  align-items: center;
+  background: #F8F5F0;
+  border-radius: 24rpx;
+  padding: 24rpx 0;
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rpx;
+}
+
+.stat-num {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1F1B16;
+}
+
+.stat-label {
+  font-size: 22rpx;
+  color: #9C9688;
+}
+
+.stat-divider {
+  width: 2rpx;
+  height: 48rpx;
+  background: #E8E4DD;
+}
+
+/* —— Section —— */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1F1B16;
+}
+
+.section-count {
+  font-size: 26rpx;
+  color: #9C9688;
+}
+
+/* —— 地块卡 —— */
+.plot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.plot-card {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  padding: 32rpx;
+}
+
+.status-dot {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.plot-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+  flex: 1;
+}
+
+.plot-name {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1F1B16;
+}
+
+.plot-sub {
+  font-size: 24rpx;
+  color: #5C5648;
+}
+
+.plot-arrow {
+  font-size: 32rpx;
+  color: #C4BFB5;
+  font-weight: 500;
+}
+
+/* —— 通用列表卡 —— */
+.list-card {
+  padding: 8rpx 32rpx;
+}
+
+.list-row {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  padding: 28rpx 0;
+  border-bottom: 2rpx solid #E8E4DD;
+}
+
+.list-row:last-child {
+  border-bottom: none;
+}
+
+.list-icon {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  flex-shrink: 0;
+}
+
+.list-name {
+  flex: 1;
+  font-size: 28rpx;
+  color: #1F1B16;
+}
+
+.list-name.danger {
+  color: #B85042;
+}
+
+.list-count {
+  background: #F2EFE8;
+  color: #5C5648;
+  font-size: 22rpx;
+  border-radius: 20rpx;
+  padding: 6rpx 18rpx;
+}
+
+.list-arrow {
+  font-size: 28rpx;
+  color: #C4BFB5;
+  font-weight: 500;
+}

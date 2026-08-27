@@ -1,0 +1,129 @@
+/* pages/plot-detail/index.wxss */
+
+.page-wrap {
+  min-height: 100vh;
+  background: var(--color-bg-page);
+}
+
+/* —— 自定义导航栏 —— */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  z-index: 100;
+  background: var(--color-bg-page);
+  box-sizing: border-box;
+}
+
+.nav-back {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
+}
+
+.nav-back-icon {
+  font-size: 32rpx;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.nav-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  max-width: 460rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.nav-placeholder {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+/* —— 地块航拍影像 —— */
+.plot-image-area {
+  height: 360rpx;
+  background: #4A5E3A;
+  border-radius: var(--radius-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plot-image-placeholder {
+  font-size: 28rpx;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.plot-image-img {
+  width: 100%;
+  height: 100%;
+}
+
+/* —— 地块信息 —— */
+.info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-label {
+  font-size: 28rpx;
+  color: var(--color-text-secondary);
+}
+
+.info-value {
+  font-size: 28rpx;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.info-divider {
+  height: 2rpx;
+  background: var(--color-border);
+}
+
+/* —— 操作按钮行 —— */
+.action-row {
+  display: flex;
+  gap: 24rpx;
+}
+
+.action-row .action-btn {
+  flex: 1;
+  height: 96rpx;
+  line-height: 96rpx;
+}
+
+/* —— 删除按钮 —— */
+.delete-btn {
+  margin-top: 32rpx;
+  background: transparent;
+  color: #B85042;
+  border: 2rpx solid #B85042;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+}

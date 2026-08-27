@@ -1,0 +1,90 @@
+/* pages/disease-history/index.wxss */
+
+.empty-wrap {
+  padding: 120rpx 0;
+}
+
+.empty-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24rpx;
+  padding: 80rpx 0;
+}
+
+.empty-icon-wrap {
+  width: 120rpx;
+  height: 120rpx;
+  background: #E8F0E4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-icon {
+  font-size: 56rpx;
+}
+
+.empty-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.empty-sub {
+  font-size: 26rpx;
+  color: var(--color-text-tertiary);
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.history-card {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  padding: 28rpx 32rpx;
+}
+
+.history-thumb {
+  width: 88rpx;
+  height: 88rpx;
+  background: #5C6E4F;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.thumb-emoji {
+  font-size: 40rpx;
+}
+
+.thumb-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+.history-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6rpx;
+}
+
+.history-name {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.history-meta {
+  font-size: 24rpx;
+  color: var(--color-text-tertiary);
+}

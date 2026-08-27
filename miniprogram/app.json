@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/home/index",
+    "pages/disease/index",
+    "pages/alerts/index",
+    "pages/plots/index",
+    "pages/profile/index",
+    "pages/capture/index",
+    "pages/result/index",
+    "pages/plot-detail/index",
+    "pages/plot-add/index",
+    "pages/pest-detail/index",
+    "pages/disease-history/index",
+    "pages/register/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F8F5F0",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "溪山农服",
+    "backgroundColor": "#F8F5F0",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#9C9688",
+    "selectedColor": "#7A8471",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "assets/icons/home_normal.png",
+        "selectedIconPath": "assets/icons/home_selected.png"
+      },
+      {
+        "pagePath": "pages/disease/index",
+        "text": "识病",
+        "iconPath": "assets/icons/disease_normal.png",
+        "selectedIconPath": "assets/icons/disease_selected.png"
+      },
+      {
+        "pagePath": "pages/alerts/index",
+        "text": "预警",
+        "iconPath": "assets/icons/alerts_normal.png",
+        "selectedIconPath": "assets/icons/alerts_selected.png"
+      },
+      {
+        "pagePath": "pages/plots/index",
+        "text": "地块",
+        "iconPath": "assets/icons/plots_normal.png",
+        "selectedIconPath": "assets/icons/plots_selected.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的",
+        "iconPath": "assets/icons/profile_normal.png",
+        "selectedIconPath": "assets/icons/profile_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于地块定位和航拍影像标注"
+    }
+  },
+  "requiredPrivateInfos": [
+    "chooseLocation",
+    "getLocation"
+  ]
+}

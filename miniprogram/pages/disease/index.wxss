@@ -1,0 +1,159 @@
+/* pages/disease/index.wxss */
+
+/* —— 拍照卡片 —— */
+.camera-card {
+  background: #7A8471;
+  border-radius: 32rpx;
+  padding: 40rpx 32rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24rpx;
+}
+
+.camera-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+  flex: 1;
+}
+
+.camera-title {
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.camera-subtitle {
+  font-size: 26rpx;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+.camera-icon {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44rpx;
+  flex-shrink: 0;
+}
+
+/* —— Section —— */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1F1B16;
+}
+
+.section-link {
+  font-size: 26rpx;
+  color: #9C9688;
+}
+
+/* —— 历史卡片 —— */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.history-card {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  padding: 24rpx;
+}
+
+.history-thumb {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 16rpx;
+  background: #5C6E4F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.thumb-emoji {
+  font-size: 44rpx;
+}
+
+.history-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6rpx;
+  flex: 1;
+}
+
+.history-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1F1B16;
+}
+
+.history-plot {
+  font-size: 24rpx;
+  color: #5C5648;
+}
+
+.history-date {
+  font-size: 22rpx;
+  color: #9C9688;
+}
+
+/* —— 常见病虫害 —— */
+.pest-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20rpx;
+}
+
+.pest-card {
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  padding: 28rpx 16rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16rpx;
+  transition: transform 0.15s ease;
+}
+
+.pest-card:active {
+  transform: scale(0.95);
+  opacity: 0.85;
+}
+
+.pest-icon {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+}
+
+.pest-name {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #1F1B16;
+}

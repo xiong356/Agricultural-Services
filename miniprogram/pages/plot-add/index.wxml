@@ -1,0 +1,51 @@
+<!-- pages/plot-add/index.wxml -->
+<view class="page-container page-slide-in {{animatingOut ? 'page-slide-out' : ''}}">
+
+  <view class="page-header">
+    <text class="page-title">添加地块</text>
+  </view>
+
+  <!-- 表单卡片 -->
+  <view class="card form-card">
+    <!-- 地块名称 -->
+    <view class="form-item">
+      <text class="form-label">地块名称</text>
+      <input class="form-input" placeholder="如：王家村A-04" value="{{form.name}}" bindinput="onFieldInput" data-field="name" />
+    </view>
+    <view class="form-divider"></view>
+
+    <!-- 所在村组 -->
+    <view class="form-item">
+      <text class="form-label">所在村组</text>
+      <input class="form-input" placeholder="如：王家村" value="{{form.village}}" bindinput="onFieldInput" data-field="village" />
+    </view>
+    <view class="form-divider"></view>
+
+    <!-- 作物类型 -->
+    <view class="form-item">
+      <text class="form-label">作物类型</text>
+      <input class="form-input" placeholder="如：水稻、玉米" value="{{form.crop}}" bindinput="onFieldInput" data-field="crop" />
+    </view>
+    <view class="form-divider"></view>
+
+    <!-- 地块面积 -->
+    <view class="form-item">
+      <text class="form-label">地块面积(亩)</text>
+      <input class="form-input" type="digit" placeholder="输入地块面积" value="{{form.area}}" bindinput="onFieldInput" data-field="area" />
+    </view>
+  </view>
+
+  <!-- 地块图片（航拍影像） -->
+  <view class="card upload-card" bindtap="chooseImage">
+    <image wx:if="{{form.image}}" class="upload-preview" src="{{form.image}}" mode="aspectFill" />
+    <view wx:else class="upload-placeholder">
+      <text class="upload-icon">📷</text>
+      <text class="upload-text">上传地块航拍影像</text>
+      <text class="upload-hint">从相册选择无人机拍摄的照片</text>
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class="btn-primary" bindtap="onSubmit">确认添加</view>
+
+</view>

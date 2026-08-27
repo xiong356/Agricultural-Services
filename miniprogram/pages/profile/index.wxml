@@ -1,0 +1,72 @@
+<!-- pages/profile/index.wxml -->
+<view class="page-container">
+
+  <!-- 个人信息卡片 -->
+  <view class="card profile-card" wx:if="{{user}}">
+    <view class="profile-top">
+      <view class="avatar">{{avatarChar}}</view>
+      <view class="profile-info">
+        <text class="user-name">{{user.name}}</text>
+        <view class="village-tag">
+          <text>{{user.village}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="stats-row">
+      <view class="stat-item">
+        <text class="stat-num">{{user.stats.area}}亩</text>
+        <text class="stat-label">种植</text>
+      </view>
+      <view class="stat-divider"></view>
+      <view class="stat-item">
+        <text class="stat-num">{{user.stats.plots}}</text>
+        <text class="stat-label">块地</text>
+      </view>
+      <view class="stat-divider"></view>
+      <view class="stat-item">
+        <text class="stat-num">{{user.stats.patrols}}</text>
+        <text class="stat-label">次巡田</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 服务记录 -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">服务记录</text>
+    </view>
+    <view class="card list-card">
+      <view class="list-row" wx:for="{{services}}" wx:key="name" data-name="{{item.name}}" bindtap="onServiceTap">
+        <view class="list-icon" style="background: {{item.color}};">
+          <text>{{item.icon}}</text>
+        </view>
+        <text class="list-name">{{item.name}}</text>
+        <view class="list-count">{{item.count}}</view>
+        <text class="list-arrow">></text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 设置 -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">设置</text>
+    </view>
+    <view class="card list-card">
+      <view
+        class="list-row"
+        wx:for="{{settings}}"
+        wx:key="key"
+        data-key="{{item.key}}"
+        bindtap="onSettingTap"
+      >
+        <view class="list-icon" style="background: {{item.color}};">
+          <text>{{item.icon}}</text>
+        </view>
+        <text class="list-name {{item.danger ? 'danger' : ''}}">{{item.name}}</text>
+        <text class="list-arrow">></text>
+      </view>
+    </view>
+  </view>
+
+</view>

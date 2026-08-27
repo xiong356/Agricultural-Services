@@ -1,0 +1,114 @@
+/* pages/alerts/index.wxss */
+
+.page-header {
+  padding: 8rpx 8rpx 0;
+}
+
+/* —— 空状态 —— */
+.empty-state {
+  display: flex;
+  justify-content: center;
+  padding-top: 120rpx;
+}
+
+.empty-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20rpx;
+  padding: 80rpx 48rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.empty-icon {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: #E8F0E4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60rpx;
+  font-weight: 700;
+  color: #7A8471;
+}
+
+.empty-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1F1B16;
+}
+
+.empty-sub {
+  font-size: 26rpx;
+  color: #9C9688;
+}
+
+/* —— 筛选 tab —— */
+.filter-tabs {
+  display: flex;
+  gap: 16rpx;
+  padding: 0 8rpx;
+}
+
+.filter-tab {
+  padding: 14rpx 32rpx;
+  background: #FFFFFF;
+  border-radius: 52rpx;
+  font-size: 26rpx;
+  color: #5C5648;
+  border: 2rpx solid #E8E4DD;
+}
+
+.filter-tab.active {
+  background: #7A8471;
+  color: #FFFFFF;
+  border-color: #7A8471;
+}
+
+/* —— 预警卡片 —— */
+.alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.alert-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.alert-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alert-time {
+  font-size: 24rpx;
+  color: #9C9688;
+}
+
+.alert-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1F1B16;
+}
+
+.alert-desc {
+  font-size: 26rpx;
+  color: #5C5648;
+  line-height: 1.6;
+}
+
+.alert-plot-tag {
+  display: inline-flex;
+  align-self: flex-start;
+  background: #F2EFE8;
+  color: #5C5648;
+  font-size: 22rpx;
+  border-radius: 20rpx;
+  padding: 8rpx 20rpx;
+}

@@ -1,0 +1,72 @@
+<!-- pages/home/index.wxml -->
+<view class="page-container">
+
+  <!-- 问候头部 -->
+  <view class="header">
+    <view class="greeting">
+      <text class="app-name">溪山农服</text>
+      <text class="hello">欢迎使用溪山农服</text>
+    </view>
+    <view class="bell" bindtap="viewAlert">
+      <text class="bell-icon">🔔</text>
+    </view>
+  </view>
+
+  <!-- 快捷入口 2x2 -->
+  <view class="quick-grid">
+    <view class="quick-item" bindtap="goCapture">
+      <view class="quick-icon" style="background: #E8F0E4;">
+        <text>📸</text>
+      </view>
+      <text class="quick-label">拍照识病</text>
+    </view>
+    <view class="quick-item" bindtap="goPlots">
+      <view class="quick-icon" style="background: #F2EFE8;">
+        <text>🗺️</text>
+      </view>
+      <text class="quick-label">我的地块</text>
+    </view>
+    <view class="quick-item" bindtap="goSpray">
+      <view class="quick-icon" style="background: #FCF0D9;">
+        <text>🛩️</text>
+      </view>
+      <text class="quick-label">飞防下单</text>
+    </view>
+    <view class="quick-item" bindtap="goReports">
+      <view class="quick-icon" style="background: #FBE8E5;">
+        <text>📋</text>
+      </view>
+      <text class="quick-label">巡田报告</text>
+    </view>
+  </view>
+
+  <!-- 预警卡片 -->
+  <view class="card alert-card" bindtap="viewAlert" wx:if="{{alert}}">
+    <view class="alert-top">
+      <view class="alert-label">
+        <view class="alert-dot" style="background: #B85042;"></view>
+        <text class="alert-title">最新预警</text>
+      </view>
+      <view class="tag-severity-medium">中等</view>
+    </view>
+    <text class="alert-msg">{{alert.message}}</text>
+    <view class="alert-link">
+      <text class="link-text">立即查看</text>
+      <text class="link-arrow">→</text>
+    </view>
+  </view>
+
+  <!-- 巡田报告卡片 -->
+  <view class="card report-card" wx:if="{{report}}">
+    <view class="report-top">
+      <text class="report-title">最新巡田报告</text>
+    </view>
+    <text class="report-date">{{report.date}}</text>
+    <view class="report-info">
+      <view class="info-dot" style="background: #D4A64A;"></view>
+      <text class="info-plot">{{report.plotName}}</text>
+      <text class="info-crop">{{report.crop}} · {{report.area}}亩</text>
+    </view>
+  </view>
+
+</view>

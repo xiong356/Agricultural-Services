@@ -1,0 +1,175 @@
+/* pages/home/index.wxss */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.app-name {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #7A8471;
+  letter-spacing: 2rpx;
+}
+
+.hello {
+  font-size: 44rpx;
+  font-weight: 600;
+  color: #1F1B16;
+}
+
+.bell {
+  width: 80rpx;
+  height: 80rpx;
+  background: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bell-icon {
+  font-size: 32rpx;
+}
+
+/* —— 快捷入口 —— */
+.quick-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24rpx;
+}
+
+.quick-item {
+  background: #FFFFFF;
+  border-radius: 32rpx;
+  padding: 28rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12rpx;
+}
+
+.quick-icon {
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}
+
+.quick-label {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #1F1B16;
+}
+
+/* —— 预警卡片 —— */
+.alert-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.alert-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alert-label {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.alert-dot {
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 50%;
+}
+
+.alert-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1F1B16;
+}
+
+.alert-msg {
+  font-size: 26rpx;
+  color: #5C5648;
+  line-height: 1.6;
+}
+
+.alert-link {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+}
+
+.link-text {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #8B6F47;
+}
+
+.link-arrow {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #8B6F47;
+}
+
+/* —— 巡田报告 —— */
+.report-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.report-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.report-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1F1B16;
+}
+
+.report-date {
+  font-size: 24rpx;
+  color: #9C9688;
+}
+
+.report-info {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.info-dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+}
+
+.info-plot {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #1F1B16;
+}
+
+.info-crop {
+  font-size: 24rpx;
+  color: #9C9688;
+}

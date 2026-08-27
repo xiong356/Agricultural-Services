@@ -1,0 +1,8 @@
+{
+  "name": "xishan-farm-service",
+  "version": "1.0.0",
+  "description": "溪山农服-病虫害管理平台微信小程序",
+  "dependencies": {
+    "tdesign-miniprogram": "^1.7.0"
+  }
+}

@@ -1,0 +1,126 @@
+/* pages/login/index.wxss */
+
+.page-wrap {
+  min-height: 100vh;
+  background: var(--color-bg-page);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 48rpx;
+  padding-top: 160rpx;
+}
+
+/* —— 品牌区 —— */
+.brand-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12rpx;
+  margin-bottom: 80rpx;
+}
+
+.brand-icon {
+  font-size: 80rpx;
+  line-height: 1;
+}
+
+.brand-title {
+  font-size: 48rpx;
+  font-weight: 700;
+  color: var(--color-sage);
+  letter-spacing: 4rpx;
+}
+
+.brand-subtitle {
+  font-size: 26rpx;
+  color: var(--color-text-tertiary);
+  letter-spacing: 2rpx;
+}
+
+/* —— 表单卡片 —— */
+.form-card {
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: var(--radius-card);
+  padding: 8rpx 36rpx;
+  box-shadow: 0 4rpx 24rpx rgba(0, 0, 0, 0.04);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+  padding: 28rpx 0;
+}
+
+.input-label {
+  font-size: 26rpx;
+  color: var(--color-text-tertiary);
+  font-weight: 500;
+}
+
+.input-field {
+  font-size: 32rpx;
+  color: var(--color-text-primary);
+  padding: 8rpx 0;
+  border: none;
+}
+
+.divider {
+  height: 2rpx;
+  background: var(--color-border);
+}
+
+/* —— 登录按钮 —— */
+.btn-login {
+  width: 100%;
+  height: 96rpx;
+  background: var(--color-sage);
+  color: #FFFFFF;
+  font-size: 34rpx;
+  font-weight: 600;
+  border-radius: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 56rpx;
+  letter-spacing: 8rpx;
+  transition: opacity 0.2s;
+}
+
+.btn-login:active {
+  opacity: 0.85;
+}
+
+.btn-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* —— 注册链接 —— */
+.register-link {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  margin-top: 40rpx;
+  font-size: 28rpx;
+  color: var(--color-text-secondary);
+}
+
+.link-text {
+  color: var(--color-brown);
+  font-weight: 500;
+}
+
+/* —— 测试提示 —— */
+.test-hint {
+  margin-top: 80rpx;
+  padding: 20rpx 32rpx;
+  background: rgba(212, 166, 74, 0.1);
+  border-radius: 24rpx;
+}
+
+.hint-text {
+  font-size: 24rpx;
+  color: var(--color-gold);
+}

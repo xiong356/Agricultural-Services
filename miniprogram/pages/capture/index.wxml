@@ -1,0 +1,62 @@
+<!-- pages/capture/index.wxml -->
+<view class="page-wrap">
+
+  <!-- 自定义导航栏 -->
+  <view class="nav-bar" style="padding-top: {{statusBarHeight}}px; height: {{navBarHeight}}px;">
+    <view class="nav-back" bindtap="goBack">
+      <text class="nav-back-icon">←</text>
+    </view>
+    <text class="nav-title">拍照识病</text>
+    <view class="nav-placeholder"></view>
+  </view>
+
+  <!-- 导航占位 -->
+  <view style="height: {{statusBarHeight + navBarHeight}}px;"></view>
+
+  <view class="page-container page-slide-in {{animatingOut ? 'page-slide-out' : ''}}">
+
+    <!-- 相机预览区 -->
+    <view class="camera-area">
+      <text class="camera-icon">📷</text>
+      <text class="camera-hint">将作物叶片置于框内拍摄</text>
+    </view>
+
+    <!-- 拍摄技巧 -->
+    <view class="card tips-card">
+      <text class="tips-title">拍摄技巧</text>
+      <view class="tips-list">
+        <view class="tip-item" wx:for="{{tips}}" wx:key="id">
+          <text class="tip-dot">•</text>
+          <text class="tip-text">{{item.text}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 主按钮：拍照识别 -->
+    <view class="btn-primary {{isLoading ? 'btn-disabled' : ''}}" bindtap="takePhoto">📷 拍照识别</view>
+
+    <!-- 次按钮：从相册选择 -->
+    <view class="btn-secondary {{isLoading ? 'btn-disabled' : ''}}" bindtap="chooseFromAlbum">从相册选择</view>
+
+  </view>
+
+  <!-- Loading 遮罩层 -->
+  <view class="loading-overlay" wx:if="{{isLoading}}">
+    <view class="loading-card">
+      <!-- 旋转动画 -->
+      <view class="loading-spinner">
+        <view class="spinner-leaf"></view>
+        <view class="spinner-leaf"></view>
+        <view class="spinner-leaf"></view>
+        <view class="spinner-leaf"></view>
+        <view class="spinner-leaf"></view>
+        <view class="spinner-leaf"></view>
+        <view class="spinner-leaf"></view>
+        <view class="spinner-leaf"></view>
+      </view>
+      <text class="loading-text">{{loadingText}}</text>
+      <text class="loading-subtext">请稍候，AI 正在分析病虫害</text>
+    </view>
+  </view>
+
+</view>

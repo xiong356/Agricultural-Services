@@ -1,0 +1,70 @@
+/* pages/plots/index.wxss */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8rpx 8rpx 0;
+}
+
+.page-count {
+  font-size: 26rpx;
+  color: #9C9688;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.add-btn {
+  width: 56rpx;
+  height: 56rpx;
+  background: var(--color-sage);
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.plot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.plot-card {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  padding: 32rpx;
+}
+
+.plot-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+  flex: 1;
+}
+
+.plot-name {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1F1B16;
+}
+
+.plot-sub {
+  font-size: 24rpx;
+  color: #5C5648;
+}
+
+.plot-arrow {
+  font-size: 32rpx;
+  color: #C4BFB5;
+  font-weight: 500;
+}

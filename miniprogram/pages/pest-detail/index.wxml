@@ -1,0 +1,30 @@
+<!-- pages/pest-detail/index.wxml -->
+<view class="page-container page-slide-in {{animatingOut ? 'page-slide-out' : ''}}">
+
+  <view class="pest-header">
+    <view class="pest-icon-wrap" style="background: {{pest.color}};">
+      <text class="pest-icon">{{pest.icon}}</text>
+    </view>
+    <text class="pest-name">{{pest.name}}</text>
+    <view class="tag-severity-{{pest.severity}}">{{severityText}}</view>
+  </view>
+
+  <!-- 症状 -->
+  <view class="card info-card">
+    <text class="info-title">症状表现</text>
+    <text class="info-text">{{pest.symptoms}}</text>
+  </view>
+
+  <!-- 发病原因 -->
+  <view class="card info-card">
+    <text class="info-title">发病原因</text>
+    <text class="info-text">{{pest.cause}}</text>
+  </view>
+
+  <!-- 防治方法 -->
+  <view class="card info-card">
+    <text class="info-title">防治方法</text>
+    <text class="info-text">{{pest.prevention}}</text>
+  </view>
+
+</view>

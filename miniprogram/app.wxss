@@ -1,0 +1,191 @@
+/* ==================== 溪山农服 全局样式 ==================== */
+/* 设计系统：Soft Lifeway + Bento Warm Brown Paper JP */
+
+page {
+  /* —— 背景色 —— */
+  --color-bg-page: #F8F5F0;       /* 暖奶油底 */
+  --color-bg-card: #FFFFFF;        /* 卡片白 */
+  --color-bg-tag: #F2EFE8;         /* 标签灰底 */
+  --color-bg-success: #E8F0E4;     /* 浅鼠尾草绿 */
+  --color-bg-warning: #FCF0D9;     /* 浅金 */
+  --color-bg-error: #FBE8E5;       /* 浅暖红 */
+
+  /* —— 文字色 —— */
+  --color-text-primary: #1F1B16;   /* 主文字 */
+  --color-text-secondary: #5C5648; /* 次文字 */
+  --color-text-tertiary: #9C9688;  /* 辅助文字 */
+  --color-text-placeholder: #C4BFB5;
+
+  /* —— 品牌色 —— */
+  --color-sage: #7A8471;           /* 鼠尾草绿（主色） */
+  --color-brown: #8B6F47;          /* 暖棕（次行动） */
+  --color-gold: #D4A64A;           /* 暖金（预警） */
+  --color-red: #B85042;            /* 暖红（严重） */
+
+  /* —— 边框色 —— */
+  --color-border: #E8E4DD;
+  --color-border-strong: #D6D2C8;
+
+  /* —— 圆角 —— */
+  --radius-card: 32rpx;    /* 16px */
+  --radius-btn: 52rpx;    /* 26px */
+  --radius-tag: 20rpx;    /* 10px */
+  --radius-icon: 16rpx;   /* 8px */
+
+  /* —— 间距 —— */
+  --space-xs: 8rpx;
+  --space-sm: 16rpx;
+  --space-md: 24rpx;
+  --space-lg: 32rpx;
+  --space-xl: 48rpx;
+
+  /* —— 字号 —— */
+  --font-hero: 44rpx;
+  --font-title: 36rpx;
+  --font-subtitle: 30rpx;
+  --font-body: 28rpx;
+  --font-caption: 24rpx;
+  --font-micro: 20rpx;
+
+  /* 页面默认背景 */
+  background: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+  font-size: var(--font-body);
+  line-height: 1.6;
+}
+
+/* —— 通用卡片 —— */
+.card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-card);
+  padding: 32rpx;
+}
+
+/* —— 通用按钮 —— */
+.btn-primary {
+  background: var(--color-sage);
+  color: #FFFFFF;
+  border-radius: var(--radius-btn);
+  font-size: 32rpx;
+  font-weight: 600;
+  text-align: center;
+  line-height: 104rpx;
+  height: 104rpx;
+}
+
+.btn-secondary {
+  background: var(--color-bg-card);
+  color: var(--color-sage);
+  border: 2rpx solid var(--color-sage);
+  border-radius: var(--radius-btn);
+  font-size: 28rpx;
+  font-weight: 600;
+  text-align: center;
+  line-height: 96rpx;
+  height: 96rpx;
+}
+
+.btn-brown {
+  background: var(--color-brown);
+  color: #FFFFFF;
+  border-radius: var(--radius-btn);
+  font-size: 32rpx;
+  font-weight: 600;
+  text-align: center;
+  line-height: 104rpx;
+  height: 104rpx;
+}
+
+/* —— 删除按钮 —— */
+.btn-danger {
+  background: transparent;
+  color: #B85042;
+  border: 2rpx solid #B85042;
+  border-radius: var(--radius-btn);
+  font-size: 28rpx;
+  font-weight: 500;
+  text-align: center;
+  line-height: 88rpx;
+  height: 88rpx;
+}
+
+/* —— 严重度标签 —— */
+.tag-severity-critical {
+  background: var(--color-bg-error);
+  color: var(--color-red);
+  font-size: 22rpx;
+  font-weight: 600;
+  border-radius: var(--radius-tag);
+  padding: 8rpx 20rpx;
+}
+
+.tag-severity-medium {
+  background: var(--color-bg-warning);
+  color: var(--color-gold);
+  font-size: 22rpx;
+  font-weight: 600;
+  border-radius: var(--radius-tag);
+  padding: 8rpx 20rpx;
+}
+
+.tag-severity-low {
+  background: var(--color-bg-success);
+  color: var(--color-sage);
+  font-size: 22rpx;
+  font-weight: 600;
+  border-radius: var(--radius-tag);
+  padding: 8rpx 20rpx;
+}
+
+/* —— 页面容器 —— */
+.page-container {
+  padding: 28rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 28rpx;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* —— 页面标题 —— */
+.page-title {
+  font-size: var(--font-title);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* —— 分割线 —— */
+.divider {
+  height: 2rpx;
+  background: var(--color-border);
+}
+
+/* —— 页面滑入动画 —— */
+@keyframes slideInRight {
+  from { transform: translateX(80rpx); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOutRight {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(80rpx); opacity: 0; }
+}
+
+.page-slide-in {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.page-slide-out {
+  animation: slideOutRight 0.25s ease-in forwards;
+}
+
+/* Tab 页淡入（switchTab 不支持滑动动画，用淡入补偿） */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.page-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}

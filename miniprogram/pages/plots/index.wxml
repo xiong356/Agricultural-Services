@@ -1,0 +1,28 @@
+<!-- pages/plots/index.wxml -->
+<view class="page-container page-fade-in">
+
+  <view class="page-header">
+    <text class="page-title">我的地块</text>
+    <view class="header-right">
+      <text class="page-count">{{totalCount}}块</text>
+      <view class="add-btn" bindtap="goAddPlot">+</view>
+    </view>
+  </view>
+
+  <view class="plot-list">
+    <view
+      class="card plot-card"
+      wx:for="{{plotList}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="goPlotDetail"
+    >
+      <view class="plot-info">
+        <text class="plot-name">{{item.name}}</text>
+        <text class="plot-sub">{{item.crop}} · {{item.area}}亩</text>
+      </view>
+      <text class="plot-arrow">></text>
+    </view>
+  </view>
+
+</view>

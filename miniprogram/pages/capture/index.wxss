@@ -1,0 +1,191 @@
+/* pages/capture/index.wxss */
+
+.page-wrap {
+  min-height: 100vh;
+  background: var(--color-bg-page);
+}
+
+/* —— 自定义导航栏 —— */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  z-index: 100;
+  background: var(--color-bg-page);
+  box-sizing: border-box;
+}
+
+.nav-back {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
+}
+
+.nav-back-icon {
+  font-size: 32rpx;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.nav-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.nav-placeholder {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+/* —— 相机预览区 —— */
+.camera-area {
+  height: 640rpx;
+  background: #2C2C28;
+  border-radius: var(--radius-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24rpx;
+}
+
+.camera-icon {
+  font-size: 96rpx;
+  line-height: 1;
+}
+
+.camera-hint {
+  font-size: 28rpx;
+  color: #FFFFFF;
+  opacity: 0.85;
+}
+
+/* —— 拍摄技巧 —— */
+.tips-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.tips-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.tip-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16rpx;
+}
+
+.tip-dot {
+  font-size: 32rpx;
+  color: var(--color-sage);
+  line-height: 1.4;
+}
+
+.tip-text {
+  font-size: 26rpx;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* —— 禁用按钮 —— */
+.btn-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* —— Loading 遮罩层 —— */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-card {
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  padding: 64rpx 48rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24rpx;
+  width: 520rpx;
+  box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.15);
+}
+
+/* —— 菊花旋转动画 —— */
+.loading-spinner {
+  position: relative;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.spinner-leaf {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 8rpx;
+  height: 24rpx;
+  margin-left: -4rpx;
+  border-radius: 4rpx;
+  background: var(--color-sage);
+  transform-origin: 4rpx 40rpx;
+  opacity: 0.25;
+  animation: spinner-fade 1s infinite linear;
+}
+
+.spinner-leaf:nth-child(1) { animation-delay: 0s; }
+.spinner-leaf:nth-child(2) { transform: rotate(45deg); animation-delay: 0.125s; }
+.spinner-leaf:nth-child(3) { transform: rotate(90deg); animation-delay: 0.25s; }
+.spinner-leaf:nth-child(4) { transform: rotate(135deg); animation-delay: 0.375s; }
+.spinner-leaf:nth-child(5) { transform: rotate(180deg); animation-delay: 0.5s; }
+.spinner-leaf:nth-child(6) { transform: rotate(225deg); animation-delay: 0.625s; }
+.spinner-leaf:nth-child(7) { transform: rotate(270deg); animation-delay: 0.75s; }
+.spinner-leaf:nth-child(8) { transform: rotate(315deg); animation-delay: 0.875s; }
+
+@keyframes spinner-fade {
+  0% { opacity: 0.25; }
+  50% { opacity: 1; }
+  100% { opacity: 0.25; }
+}
+
+.loading-text {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.loading-subtext {
+  font-size: 24rpx;
+  color: var(--color-text-tertiary);
+}

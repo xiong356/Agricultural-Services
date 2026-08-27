@@ -1,0 +1,85 @@
+<!-- pages/result/index.wxml -->
+<view class="page-wrap">
+
+  <!-- 自定义导航栏 -->
+  <view class="nav-bar" style="padding-top: {{statusBarHeight}}px; height: {{navBarHeight}}px;">
+    <view class="nav-back" bindtap="goBack">
+      <text class="nav-back-icon">←</text>
+    </view>
+    <text class="nav-title">识别结果</text>
+    <view class="nav-share" bindtap="onShare" wx:if="{{!fromHistory}}">
+      <text class="nav-share-icon">↗</text>
+    </view>
+  </view>
+
+  <!-- 导航占位 -->
+  <view style="height: {{statusBarHeight + navBarHeight}}px;"></view>
+
+  <view class="page-container page-slide-in {{animatingOut ? 'page-slide-out' : ''}}">
+
+    <!-- 照片预览（有图片路径时显示） -->
+    <view class="photo-area" wx:if="{{filePath}}">
+      <image class="photo-img" src="{{filePath}}" mode="aspectFill" />
+    </view>
+    <view class="photo-area" wx:elif="{{!fromHistory}}">
+      <text class="photo-placeholder">叶片照片预览</text>
+    </view>
+
+    <!-- 历史记录来源信息 -->
+    <view class="history-source" wx:if="{{fromHistory}}">
+      <text class="source-label">来自历史记录</text>
+      <text class="source-info" wx:if="{{historyDate}}">{{historyDate}}</text>
+      <text class="source-info" wx:if="{{historyPlotName}}">· {{historyPlotName}}</text>
+    </view>
+
+    <!-- 诊断卡片 -->
+    <view class="card diagnosis-card" wx:if="{{result}}">
+      <view class="severity-row">
+        <view class="severity-label">
+          <view class="severity-dot"></view>
+          <text class="severity-text">病害 · {{severityText}}严重度</text>
+        </view>
+        <view class="tag-severity-critical">{{severityText}}</view>
+      </view>
+
+      <text class="disease-name">{{result.diseaseName}}</text>
+
+      <view class="meta-row">
+        <view class="meta-item">
+          <text class="meta-label">置信度</text>
+          <text class="meta-value sage">{{confidencePercent}}%</text>
+        </view>
+        <view class="meta-divider"></view>
+        <view class="meta-item">
+          <text class="meta-label">识别时间</text>
+          <text class="meta-value">{{result.time}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 防治建议 -->
+    <view class="card treatment-card">
+      <view class="treatment-head">
+        <text class="treatment-icon">💊</text>
+        <text class="treatment-title">防治建议</text>
+      </view>
+      <view class="treatment-list">
+        <view class="treatment-row" wx:for="{{result.treatments}}" wx:key="label">
+          <view class="row-dot"></view>
+          <text class="row-label">{{item.label}}</text>
+          <text class="row-value">{{item.value}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 主按钮：一键预约飞防 -->
+    <view class="btn-brown" bindtap="bookSpray">🛩️ 一键预约飞防</view>
+
+    <!-- 次按钮：查看历史记录 -->
+    <view class="btn-secondary" bindtap="viewHistory">查看历史记录</view>
+
+    <!-- 删除记录（仅历史查看时显示） -->
+    <view class="btn-danger delete-btn" wx:if="{{fromHistory}}" bindtap="onDeleteRecord">删除此记录</view>
+
+  </view>
+</view>

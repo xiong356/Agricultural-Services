@@ -1,0 +1,48 @@
+<!-- pages/alerts/index.wxml -->
+<view class="page-container">
+
+  <view class="page-header">
+    <text class="page-title">预警中心</text>
+  </view>
+
+  <!-- 空状态 -->
+  <view class="empty-state" wx:if="{{!hasAlerts}}">
+    <view class="card empty-card">
+      <view class="empty-icon">
+        <text>✓</text>
+      </view>
+      <text class="empty-title">暂无预警信息</text>
+      <text class="empty-sub">当前所有地块健康状态良好</text>
+    </view>
+  </view>
+
+  <!-- 预警列表 -->
+  <block wx:if="{{hasAlerts}}">
+    <view class="filter-tabs">
+      <view
+        class="filter-tab {{activeFilter === item.key ? 'active' : ''}}"
+        wx:for="{{filters}}"
+        wx:key="key"
+        data-key="{{item.key}}"
+        bindtap="onFilter"
+      >
+        <text>{{item.label}}</text>
+      </view>
+    </view>
+
+    <view class="alert-list">
+      <view class="card alert-card" wx:for="{{filteredList}}" wx:key="id">
+        <view class="alert-top">
+          <view class="{{item.severityClass}}">{{item.severityText}}</view>
+          <text class="alert-time">{{item.timeText}}</text>
+        </view>
+        <text class="alert-title">{{item.title}}</text>
+        <text class="alert-desc">{{item.description}}</text>
+        <view class="alert-plot-tag">
+          <text>{{item.plotName}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+</view>

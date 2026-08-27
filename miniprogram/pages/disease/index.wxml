@@ -1,0 +1,51 @@
+<!-- pages/disease/index.wxml -->
+<view class="page-container">
+
+  <!-- 拍照识病 快捷卡片 -->
+  <view class="camera-card" bindtap="goCapture">
+    <view class="camera-text">
+      <text class="camera-title">拍照识病</text>
+      <text class="camera-subtitle">拍一张作物照片，AI 即时识别病虫害</text>
+    </view>
+    <view class="camera-icon">
+      <text>📷</text>
+    </view>
+  </view>
+
+  <!-- 最近识别 -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">最近识别</text>
+      <text class="section-link" bindtap="viewAll">查看全部</text>
+    </view>
+    <view class="history-list">
+      <view class="card history-card" wx:for="{{historyList}}" wx:key="id">
+        <view class="history-thumb">
+          <text class="thumb-emoji">🌾</text>
+        </view>
+        <view class="history-info">
+          <text class="history-name">{{item.name}}</text>
+          <text class="history-plot">{{item.plotName}}</text>
+          <text class="history-date">{{item.dateText}}</text>
+        </view>
+        <view class="{{item.severityClass}}">{{item.severityText}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 常见病虫害 -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">常见病虫害</text>
+    </view>
+    <view class="pest-grid">
+      <view class="pest-card" wx:for="{{pestList}}" wx:key="id" data-id="{{item.id}}" bindtap="goPestDetail">
+        <view class="pest-icon" style="background: {{item.color}};">
+          <text>{{item.icon}}</text>
+        </view>
+        <text class="pest-name">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>

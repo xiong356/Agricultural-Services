@@ -1,0 +1,55 @@
+<!-- pages/login/index.wxml -->
+<view class="page-wrap">
+
+  <!-- 顶部品牌区 -->
+  <view class="brand-section">
+    <view class="brand-icon">🌾</view>
+    <text class="brand-title">溪山农服</text>
+    <text class="brand-subtitle">智慧农业 · 科学植保</text>
+  </view>
+
+  <!-- 登录表单 -->
+  <view class="form-card">
+    <view class="input-group">
+      <text class="input-label">手机号</text>
+      <input
+        class="input-field"
+        type="number"
+        maxlength="11"
+        placeholder="请输入手机号"
+        value="{{phone}}"
+        bindinput="onPhoneInput"
+      />
+    </view>
+
+    <view class="divider"></view>
+
+    <view class="input-group">
+      <text class="input-label">密码</text>
+      <input
+        class="input-field"
+        password="{{true}}"
+        placeholder="请输入密码"
+        value="{{password}}"
+        bindinput="onPasswordInput"
+      />
+    </view>
+  </view>
+
+  <!-- 登录按钮 -->
+  <view class="btn-login {{loading ? 'btn-disabled' : ''}}" bindtap="onLogin">
+    {{loading ? '登录中...' : '登 录'}}
+  </view>
+
+  <!-- 注册链接 -->
+  <view class="register-link" bindtap="goRegister">
+    <text>还没有账号？</text>
+    <text class="link-text">立即注册</text>
+  </view>
+
+  <!-- 测试账号提示 -->
+  <view class="test-hint" bindtap="fillTestAccount">
+    <text class="hint-text">点击填充测试账号：13800138000 / 123456</text>
+  </view>
+
+</view>

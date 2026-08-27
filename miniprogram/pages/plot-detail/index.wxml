@@ -1,0 +1,52 @@
+<!-- pages/plot-detail/index.wxml -->
+<view class="page-wrap">
+
+  <!-- 自定义导航栏 -->
+  <view class="nav-bar" style="padding-top: {{statusBarHeight}}px; height: {{navBarHeight}}px;">
+    <view class="nav-back" bindtap="goBack">
+      <text class="nav-back-icon">←</text>
+    </view>
+    <text class="nav-title">{{plot.name}}</text>
+    <view class="nav-placeholder"></view>
+  </view>
+
+  <!-- 导航占位 -->
+  <view style="height: {{statusBarHeight + navBarHeight}}px;"></view>
+
+  <view class="page-container page-slide-in {{animatingOut ? 'page-slide-out' : ''}}">
+
+    <!-- 地块航拍影像 -->
+    <view class="plot-image-area">
+      <image wx:if="{{plot.image}}" class="plot-image-img" src="{{plot.image}}" mode="aspectFill" />
+      <text wx:else class="plot-image-placeholder">地块航拍影像</text>
+    </view>
+
+    <!-- 地块信息 -->
+    <view class="card info-card">
+      <view class="info-row">
+        <text class="info-label">作物类型</text>
+        <text class="info-value">{{plot.crop}}</text>
+      </view>
+      <view class="info-divider"></view>
+      <view class="info-row">
+        <text class="info-label">地块面积</text>
+        <text class="info-value">{{plot.area}}亩</text>
+      </view>
+      <view class="info-divider"></view>
+      <view class="info-row">
+        <text class="info-label">上次修改</text>
+        <text class="info-value">{{plot.lastPatrol}}</text>
+      </view>
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="action-row">
+      <view class="btn-secondary action-btn" bindtap="viewPatrolReport">巡田报告</view>
+      <view class="btn-primary action-btn" bindtap="orderSpray">飞防下单</view>
+    </view>
+
+    <!-- 删除地块 -->
+    <view class="btn-danger delete-btn" bindtap="onDeletePlot">删除地块</view>
+
+  </view>
+</view>

@@ -1,0 +1,32 @@
+<!-- pages/disease-history/index.wxml -->
+<view class="page-container page-slide-in {{animatingOut ? 'page-slide-out' : ''}}">
+
+  <view class="page-header">
+    <text class="page-title">识病记录</text>
+  </view>
+
+  <view wx:if="{{list.length === 0}}" class="empty-wrap">
+    <view class="card empty-card">
+      <view class="empty-icon-wrap">
+        <text class="empty-icon">📷</text>
+      </view>
+      <text class="empty-title">暂无识别记录</text>
+      <text class="empty-sub">拍一张作物照片开始识别</text>
+    </view>
+  </view>
+
+  <view class="history-list" wx:else>
+    <view class="card history-card" wx:for="{{list}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+      <view class="history-thumb">
+        <image wx:if="{{item.thumbnail}}" class="thumb-img" src="{{item.thumbnail}}" mode="aspectFill" binderror="onThumbError" data-index="{{index}}" />
+        <text wx:else class="thumb-emoji">🌾</text>
+      </view>
+      <view class="history-info">
+        <text class="history-name">{{item.name}}</text>
+        <text class="history-meta">{{item.plotName || '未知地块'}} · {{item.dateText}}</text>
+      </view>
+      <view class="{{item.severityClass}}">{{item.severityText}}</view>
+    </view>
+  </view>
+
+</view>
